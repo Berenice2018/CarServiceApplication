@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">CarService</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- car add -->
+    <string name="add_car_hint_name">Car name</string>
+    <string name="add_car_hint_plate">Plate</string>
+    <string name="add_car_activity_title">Add a car</string>
+    <string name="add_car_save">Save</string>
+    <!-- end car add -->
+
+    <!-- tools section -->
+    <string name="tools_car_name">My car</string>
+    <string name="tools_car_plate">AA123ZZ</string>
+    <!-- end tools section -->
+</resources>
