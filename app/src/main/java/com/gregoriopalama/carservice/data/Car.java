@@ -13,6 +13,8 @@ import android.support.annotation.NonNull;
 public class Car {
     public static final String TABLE_NAME = "Car";
 
+    public static final String COLUMN_PLATE = "plate";
+
     @PrimaryKey
     @NonNull
     private String plate;

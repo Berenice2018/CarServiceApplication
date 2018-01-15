@@ -33,6 +33,11 @@ public class CarRepositoryImpl implements CarRepository {
     }
 
     @Override
+    public LiveData<Car> getFromPlate(String plate) {
+        return carDao.selectByPlate(plate);
+    }
+
+    @Override
     public Completable insert(Car... cars) {
         return Completable.fromAction(() -> carDao.insert(cars));
     }

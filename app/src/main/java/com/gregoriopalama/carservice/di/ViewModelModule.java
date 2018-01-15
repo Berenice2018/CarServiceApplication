@@ -4,6 +4,7 @@ import android.arch.lifecycle.ViewModel;
 import android.arch.lifecycle.ViewModelProvider;
 
 import com.gregoriopalama.carservice.viewmodel.CarAddViewModel;
+import com.gregoriopalama.carservice.viewmodel.CarViewModel;
 import com.gregoriopalama.carservice.viewmodel.CarsListViewModel;
 
 import dagger.Binds;
@@ -25,6 +26,11 @@ public abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(CarAddViewModel.class)
     abstract ViewModel bindCarAddViewModel(CarAddViewModel carAddViewModel);
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(CarViewModel.class)
+    abstract ViewModel bindCarViewModel(CarViewModel carViewModel);
 
 
     @Binds

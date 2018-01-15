@@ -27,4 +27,7 @@ public interface CarDao {
 
     @Query("SELECT * FROM " + Car.TABLE_NAME)
     public LiveData<List<Car>> selectAll();
+
+    @Query("SELECT * FROM " + Car.TABLE_NAME + " WHERE " + Car.COLUMN_PLATE + " = :plate")
+    public LiveData<Car> selectByPlate(String plate);
 }

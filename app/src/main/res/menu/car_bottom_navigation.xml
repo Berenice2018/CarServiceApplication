@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/car_nav_services"
+            android:icon="@drawable/ic_build"
+            android:title="@string/car_nav_services"
+            app:showAsAction="ifRoom"/>
+        <item
+            android:id="@+id/car_nav_tyres"
+            android:icon="@drawable/ic_car_wheel"
+            android:title="@string/car_nav_tyres"
+            app:showAsAction="ifRoom"/>
+        <item
+            android:id="@+id/car_nav_tax"
+            android:icon="@drawable/ic_account_balance_wallet"
+            android:title="@string/car_nav_tax"
+            app:showAsAction="ifRoom"/>
+    </group>
+
+</menu>

@@ -48,7 +48,7 @@ public class CarsListFragment extends Fragment implements Injectable {
         binding.addCar.setOnClickListener(v ->
                         startActivity(new Intent(getContext(), CarAddActivity.class)));
 
-        carsListViewModel = ViewModelProviders.of(this, carServiceViewModelFactory)
+        carsListViewModel = ViewModelProviders.of(getActivity(), carServiceViewModelFactory)
                 .get(CarsListViewModel.class);
 
         carsListViewModel.getCars().observe(this, cars -> {

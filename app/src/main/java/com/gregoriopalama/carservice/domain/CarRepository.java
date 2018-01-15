@@ -14,6 +14,7 @@ import io.reactivex.Completable;
 
 public interface CarRepository {
     public LiveData<List<Car>> getAll();
+    public LiveData<Car> getFromPlate(String plate);
     public Completable insert(Car... cars);
     public Completable update(Car car);
     public Completable delete(Car car);

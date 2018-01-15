@@ -9,11 +9,10 @@
         tools:context="com.gregoriopalama.carservice.ui.main.MainActivity"
         tools:showIn="@layout/app_bar_main">
 
-        <fragment
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/fragment"
-            android:name="com.gregoriopalama.carservice.ui.cars.CarsListFragment"/>
+            android:id="@+id/fragment"/>
 
     </android.support.constraint.ConstraintLayout>
 </layout>

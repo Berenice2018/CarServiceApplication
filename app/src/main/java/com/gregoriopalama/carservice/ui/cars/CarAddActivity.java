@@ -1,6 +1,7 @@
 package com.gregoriopalama.carservice.ui.cars;
 
 import android.arch.lifecycle.ViewModelProviders;
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
@@ -20,6 +21,8 @@ import dagger.android.DispatchingAndroidInjector;
 import dagger.android.support.HasSupportFragmentInjector;
 
 public class CarAddActivity extends AppCompatActivity implements HasSupportFragmentInjector {
+    public static final String CAR_PLATE = "com.gregoriopalama.carservice.data.car.PLATE";
+
     ActivityCarAddBinding binding;
 
     @Inject
@@ -29,6 +32,7 @@ public class CarAddActivity extends AppCompatActivity implements HasSupportFragm
     ViewModelFactory carServiceViewModelFactory;
 
     private CarAddViewModel carAddViewModel;
+    private int result = RESULT_CANCELED;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,12 +53,21 @@ public class CarAddActivity extends AppCompatActivity implements HasSupportFragm
     }
 
     @Override
+    public void finish() {
+        Intent data = new Intent();
+        data.putExtra(CAR_PLATE, carAddViewModel.getCarPlate());
+        setResult(result, data);
+        super.finish();
+    }
+
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
         switch (id) {
             case R.id.car_save:
                 carAddViewModel.addCar();
+                result = RESULT_OK;
                 finish();
                 break;
             case android.R.id.home:

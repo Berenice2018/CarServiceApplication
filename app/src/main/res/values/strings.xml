@@ -9,6 +9,18 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <!-- menu section -->
+    <string name="menu_cars">My cars</string>
+    <string name="menu_add_car">Add a car</string>
+    <string name="menu_settings">Settings</string>
+    <!-- end menu section -->
+
+    <!-- car navigation section -->
+    <string name="car_nav_services">Services</string>
+    <string name="car_nav_tyres">Tyres</string>
+    <string name="car_nav_tax">Tax</string>
+    <!-- end car navigation section -->
+
     <!-- car add -->
     <string name="add_car_hint_name">Car name</string>
     <string name="add_car_hint_plate">Plate</string>
